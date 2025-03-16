@@ -183,14 +183,14 @@ function setPopup(elements){
     // Add listener to the confirmation button.
     confirmBtn.addEventListener("click", ()=>{
         let num = parseInt(cartNumber.innerHTML.slice(1, -1), 10);
-        let input_num = parseInt(quantityInput.value);
+        let inputNumm = parseInt(quantityInput.value);
         let regex = /^[0-9]+$/;
 
-        if(input_num == NaN){
+        if(inputNum == NaN){
             quantityInput.focus();
         }
-        else if(input_num >= quantityInput.min && input_num <= quantityInput.max && regex.test(quantityInput.value)){
-            num += input_num
+        else if(inputNum >= quantityInput.min && inputNum <= quantityInput.max && regex.test(quantityInput.value)){
+            num += inputNum
             quantityInput.value="";
             cartNumber.innerHTML = "(" + num + ")";
             // Hide the item when clicking confirm.
@@ -315,32 +315,32 @@ function addRow(tableBody, book){
     }
 
     // Add checkbox
-    let new_data = document.createElement("td");
-    let checkbox_cell = document.createElement("input");
-    checkbox_cell.setAttribute("type", "checkbox"); 
-    new_data.appendChild(checkbox_cell);
-    newRow.appendChild(new_data);
+    let newData = document.createElement("td");
+    let checkboxCell = document.createElement("input");
+    checkboxCell.setAttribute("type", "checkbox"); 
+    newData.appendChild(checkboxCell);
+    newRow.appendChild(newData);
 
     // Add image
-    new_data = document.createElement("td");
-    let img_cell = document.createElement("img");
-    img_cell.setAttribute("class", "bookThumbnail");
-    img_cell.setAttribute("src", book["img"]);
-    img_cell.setAttribute("alt", book["title"]);
-    new_data.appendChild(img_cell);
-    newRow.appendChild(new_data);
+    newData = document.createElement("td");
+    let imgCell = document.createElement("img");
+    imgCell.setAttribute("class", "bookThumbnail");
+    imgCell.setAttribute("src", book["img"]);
+    imgCell.setAttribute("alt", book["title"]);
+    newData.appendChild(imgCell);
+    newRow.appendChild(newData);
 
     // Add title
-    new_data = document.createElement("td");
-    let title_cell = document.createElement("label");
-    title_cell.innerHTML = book["title"];
-    new_data.appendChild(title_cell);
-    newRow.appendChild(new_data);
+    newData = document.createElement("td");
+    let titleCell = document.createElement("label");
+    titleCell.innerHTML = book["title"];
+    newData.appendChild(titleCell);
+    newRow.appendChild(newData);
 
     // Add rating
-    new_data = document.createElement("td");
-    let rating_cell = document.createElement("div");
-    rating_cell.setAttribute("class", "flex-row");
+    newData = document.createElement("td");
+    let ratingCell = document.createElement("div");
+    ratingCell.setAttribute("class", "flex-row");
     // Add stars according to the rating.
     for(let i = 1; i <= 5; i++){
         if(i <= book["rating"]){
@@ -348,53 +348,53 @@ function addRow(tableBody, book){
             star.setAttribute("class", "icons");
             star.setAttribute("src", "./images/star-16.ico");
             star.setAttribute("alt", "star");
-            rating_cell.appendChild(star);
+            ratingCell.appendChild(star);
         }
         else{
-            let outline_star = document.createElement("img");
-            outline_star.setAttribute("class", "icons");
-            outline_star.setAttribute("src", "./images/outline-star-16.ico");
-            outline_star.setAttribute("alt", "outline_star");
-            rating_cell.appendChild(outline_star);
+            let outlineStar = document.createElement("img");
+            outlineStar.setAttribute("class", "icons");
+            outlineStar.setAttribute("src", "./images/outline-star-16.ico");
+            outlineStar.setAttribute("alt", "outline_star");
+            ratingCell.appendChild(outlineStar);
         }
     }
-    new_data.appendChild(rating_cell);
-    newRow.appendChild(new_data);
+    newData.appendChild(ratingCell);
+    newRow.appendChild(newData);
 
     // Add authors
-    new_data = document.createElement("td");
-    var author_cell = document.createElement("label");
-    author_cell.innerHTML = book["authors"];
-    new_data.appendChild(author_cell);
-    newRow.appendChild(new_data);
+    newData = document.createElement("td");
+    var authorCell = document.createElement("label");
+    authorCell.innerHTML = book["authors"];
+    newData.appendChild(authorCell);
+    newRow.appendChild(newData);
 
     // Add year
-    new_data = document.createElement("td");
-    var year_cell = document.createElement("label");
-    year_cell.innerHTML = book["year"];
-    new_data.appendChild(year_cell);
-    newRow.appendChild(new_data);
+    newData = document.createElement("td");
+    var yearCell = document.createElement("label");
+    yearCell.innerHTML = book["year"];
+    newData.appendChild(yearCell);
+    newRow.appendChild(newData);
 
     // Add price
-    new_data = document.createElement("td");
-    var price_cell = document.createElement("label");
-    price_cell.innerHTML = book["price"];
-    new_data.appendChild(price_cell);
-    newRow.appendChild(new_data);
+    newData = document.createElement("td");
+    var priceCell = document.createElement("label");
+    priceCell.innerHTML = book["price"];
+    newData.appendChild(priceCell);
+    newRow.appendChild(newData);
 
     // Add publisher
-    new_data = document.createElement("td");
-    var pub_cell = document.createElement("label");
-    pub_cell.innerHTML = book["publisher"];
-    new_data.appendChild(pub_cell);
-    newRow.appendChild(new_data);
+    newData = document.createElement("td");
+    var pubCell = document.createElement("label");
+    pubCell.innerHTML = book["publisher"];
+    newData.appendChild(pubCell);
+    newRow.appendChild(newData);
 
     // Add category
-    new_data = document.createElement("td");
-    var cate_cell = document.createElement("label");
-    cate_cell.innerHTML = book["category"];
-    new_data.appendChild(cate_cell);
-    newRow.appendChild(new_data);
+    newData = document.createElement("td");
+    var cateCell = document.createElement("label");
+    cateCell.innerHTML = book["category"];
+    newData.appendChild(cateCell);
+    newRow.appendChild(newData);
 }
 
 
