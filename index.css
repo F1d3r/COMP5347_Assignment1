@@ -1,0 +1,266 @@
+﻿/* General text formatting */
+h1, h2, h3, nav, footer {
+   font-family: Georgia, Cambria, "Times New Roman", serif;
+}
+
+body {
+   font-family: "Lucida Sans", Verdana, Arial, sans-serif;
+   font-size: 80%;
+   background-color: white;
+}
+
+body.darkMode {
+   font-family: "Lucida Sans", Verdana, Arial, sans-serif;
+   font-size: 80%;
+}
+
+
+
+/* Table formatting */
+table {
+   border: solid; 
+   border-spacing: 0;
+   margin-top: 20px;
+   padding: 20px;
+   border-radius: 2px;
+   border-color: #95BEF0; 
+}
+
+table tbody td{
+   border-top: 1pt solid #95BEF0;   
+   line-height: 1.5em;
+   vertical-align: middle;
+   padding: 0.5em 0.75em;
+}
+
+table thead th{
+   text-align: left;
+   padding: 0.25em 0.75em; 
+}
+
+thead {
+   background-color: #c3daeb;
+}
+
+
+
+/* Form formating */
+form{
+   display: flex;
+   justify-content: space-between;
+   background-color: rgb(222, 241, 241);
+   padding: 10px;
+}
+
+
+
+/* Image size */
+.bookThumbnail {
+   width: 60px;
+   height: 90px;
+}
+
+.icons{
+   height: 25px;
+}
+
+
+
+/* Other formatting */
+div.flex-row{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+}
+
+input{
+   margin: 5px;
+}
+
+select{
+   margin: 5px;
+}
+
+ #darkMode {
+    margin: 5px;
+ }
+
+ .darkModeSwitch {
+    position: relative;
+    height: 30px;
+    width: 60px;
+    display: inline-block;
+ }
+
+.matchSearch{
+   background-color: rgb(233, 244, 244);
+}
+
+.mouseHover{
+   background-color: rgb(166, 177, 177);
+}
+
+#storeLabel{
+   font-size: 4em;
+}
+
+#pageTitle{
+   background-color: rgb(222, 241, 241);
+   padding-left: 10px;
+   display: flex;
+   justify-content: space-between;
+}
+
+
+
+/* Popup */
+.popup {
+   position: relative;
+}
+
+.hidden {
+   visibility: hidden;
+}
+
+.popupNumber {
+   background-color: rgb(222, 241, 241);
+   position: absolute;
+   bottom: 100%;
+ }
+
+input[type="number"] {
+   /* 9 ch for 'Quantity' */
+   width: 9.5ch;
+}
+
+
+
+/* Darkmode switch */
+.darkModeSwitch input[type='checkbox'] {
+   opacity: 0;
+   width: 0;
+   height: 0;
+}
+
+.slider {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-color: #ccc;
+   -webkit-transition: .4s;
+   transition: .4s;
+
+}
+
+.slider::before {
+   position: absolute;
+   content: "";
+   height: 26px;
+   width: 26px;
+   left: 4px;
+   top: 2px;
+   background-color: white;
+   -webkit-transition: .4s;
+   transition: .4s;
+ }
+/* Using the sibling selector to indicate the status of the checkbox */
+input:checked + .slider {
+   background-color: #1c8eeb;
+ }
+/* Move the square when check the box */
+input:checked + .slider::before {
+   -webkit-transform: translateX(26px);
+   -ms-transform: translateX(26px);
+   transform: translateX(26px);
+}
+
+
+
+/* Darkmode */
+.darkMode {
+   background-color: #1c1f22;
+   color: white;
+   border-color: #113047;
+}
+
+thead.darkMode{
+   background-color: #2d3236;
+}
+
+.darkMode.mouseHover{
+   background-color: rgb(99, 111, 111);
+}
+
+.darkMode.matchSearch{
+   background-color: rgb(71, 81, 81);
+}
+
+.darkMode.mouseHover.matchSearch {
+   background-color: rgb(111, 122, 122)
+}
+
+#popup.darkMode {
+   background-color: #1c1f22;
+   color: white;
+   border-color: #113047;
+ }
+
+ #darkMode label {
+    display: flex;
+    align-items: center;
+    margin: 5px;
+ }
+
+ #pageTitle.darkMode{
+   background-color: #1c1f22;
+   color: white;
+   border-color: #113047;
+}
+
+
+
+/* Invalid animation */
+ @keyframes blink {
+   0%   {color: red;}
+   25%  {color: white;}
+   50%  {color: red;}
+   100% {color: white;}
+ }
+ 
+ .invalid{
+    animation: blink 1s;
+ }
+
+ .invalid::placeholder{
+   animation: blink 1s;
+   color: red;
+   font-style: italic;
+}
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

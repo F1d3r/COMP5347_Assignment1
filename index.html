@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+   <meta charset="utf-8">
+   <title>B2YBooks</title>
+   <link rel="stylesheet" href="./index.css" />
+   <script src="./index.js"></script>
+</head>
+
+<body>
+   <div id="pageTitle" class="flex-row">
+      <label id="storeLabel">B2YBook</label>
+
+      <div class="flex-row" id="darkMode">
+         <label>Dark Mode</label>
+         <label class="darkModeSwitch">
+            <input type="checkbox" id="darkModeCheckBox">
+            <span class="slider"></span>
+         </label>
+      </div>
+   </div>
+
+
+   <form  method="get" action="" id="mainForm">
+
+      <div class="flex-row">
+         <div class="flex-row">
+            <input type="text" name="search" id="searchbox" placeholder="Search title">
+             <input type="submit" value="Search">
+         </div>
+         
+         <div class="flex-row">
+            <select name="category" id="filterselect">
+               <option value=-1>Select Category</option>
+            </select>
+             <input type="submit" value="Filter">
+         </div>
+         
+      </div>
+      
+
+      <div class="flex-row">
+         <div class="popup">
+            <input id="add_to_cart" type="button" value="Add to cart">
+            <div class="popupNumber flex-row hidden" id="popup" tabindex="0">
+               <input type="number" name="quantity" id="quantity" min="0" max="10" step="1" placeholder="Quantity">
+               <input type="button" value="Confirm">
+            </div>
+         </div>
+
+         <input id="reset_cart" type="button" value="Reset the cart">
+         <div>
+            <img class="icons" src="./images/shopping_cart.png" alt="cart" id="cartImg">
+            <label id="cart_number">(0)</label>
+         </div>
+      </div>
+   </form>
+
+
+   <table id="book_list">
+      <thead>
+         <tr>
+            <th></th>
+            <th></th>
+            <th>Title</th>
+            <th></th>
+            <th>Authors</th>
+            <th>Year</th>
+            <th>Price</th>
+            <th>Publisher</th>
+            <th>Category</th>
+         </tr>
+      </thead>
+
+      <tbody>
+
+      </tbody>
+      
+   </table>
+
+
+</body>
+</html>
