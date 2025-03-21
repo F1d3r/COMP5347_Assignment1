@@ -139,7 +139,9 @@ function setSubmit(elements, bookList, bookCategory, selectBookList){
         // 
         setAddBtn(elements);
         linkCheckboxes(elements["checkboxes"]);
-        
+
+
+        let match = 0
 
         // Then change the background color of searched books.
         tableBody.querySelectorAll("tr").forEach(row => {
@@ -151,6 +153,7 @@ function setSubmit(elements, bookList, bookCategory, selectBookList){
             }
             // If the title of the row match the search input.
             if(row.childNodes[2].firstChild.innerHTML.includes(searchInput.value)){
+                match += 1
                 // console.log("match");
                 row.classList.add("matchSearch");
             }else{
@@ -158,6 +161,13 @@ function setSubmit(elements, bookList, bookCategory, selectBookList){
                 row.classList.remove("matchSearch");
             }
         })
+
+        // // If there is no matched book, popup an alert.
+        if(match == 0 && searchInput.value != "" && searchInput.value != null){
+            alert("No matched result.");
+        }
+
+
     }
 }
 

@@ -4,7 +4,7 @@ OS: Windows.
 Browser tested: Edge, Chrome.
 Node.js: 22.14.0
 npm: 10.9.2
-Similary version of above is required to run the application.
+Similary version of above is required to run the application in a local server environment.
 
 
 # Instruction to run the application
@@ -16,7 +16,7 @@ Using the urls provided in the browser to access the web page.
 ## Browse the books
 The main page of the application consists of two part: a form including the search box and category selection, and the table of book list.
 The page will automatically load all available books recorded in the data.json file. The user can input to the search box or select according category of books in the form.
-By clicking the _'search'_ or _'filter'_ button, the form will be submit and the search/filter will be applied. Books with selected category will be displayed and thoes who matches the search term will be highlighted.
+By clicking the _'search'_ or _'filter'_ button, the form will be submit and the search/filter will be applied. Books with selected category will be displayed and thoes who matches the search term will be highlighted. If there is no matched result to the search, an alert window will show up.
 
 ## Add books into cart
 The user can add books into cart by first checking the corresponding checkbox or the area of corresponding row, then click _"add to cart"_ button, then enter the quantity at the popup panel and confirm the quantity by clicking the _"confirm"_ button.
